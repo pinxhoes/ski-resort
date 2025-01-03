@@ -1,0 +1,428 @@
+{
+  "version": "3.4",
+  "log": [
+    {
+      "@openzeppelin/contracts/access/Ownable.sol:Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:ERC1155": {
+        "src": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:20",
+        "version": {
+          "withMetadata": "26cd6025781a8f80e654257bfed21813b4b48eac4b0d1f26fbc598dac2354490",
+          "withoutMetadata": "26cd6025781a8f80e654257bfed21813b4b48eac4b0d1f26fbc598dac2354490",
+          "linkedWithoutMetadata": "26cd6025781a8f80e654257bfed21813b4b48eac4b0d1f26fbc598dac2354490"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol:IERC1155MetadataURI",
+          "@openzeppelin/contracts/token/ERC1155/IERC1155.sol:IERC1155",
+          "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string)",
+          "supportsInterface(bytes4)",
+          "uri(uint256)",
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC1155",
+            "src": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:35"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC1155",
+              "label": "_balances",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:24"
+            },
+            {
+              "contract": "ERC1155",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:27"
+            },
+            {
+              "contract": "ERC1155",
+              "label": "_uri",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:30"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/token/ERC1155/IERC1155.sol:IERC1155": {
+        "src": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol:14",
+        "inherit": [
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol:IERC1155Receiver": {
+        "src": "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol:11",
+        "inherit": [
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "onERC1155Received(address,address,uint256,uint256,bytes)",
+          "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol:IERC1155MetadataURI": {
+        "src": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol:14",
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC1155/IERC1155.sol:IERC1155",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "uri(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/utils/Address.sol:Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "25c3d3c68dafa687e3a24a940cd70a78f8093e18ef694b9d20da3916936b35a6",
+          "withoutMetadata": "25c3d3c68dafa687e3a24a940cd70a78f8093e18ef694b9d20da3916936b35a6",
+          "linkedWithoutMetadata": "25c3d3c68dafa687e3a24a940cd70a78f8093e18ef694b9d20da3916936b35a6"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:191"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:191"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/utils/Context.sol:Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165": {
+        "src": "@openzeppelin/contracts/utils/introspection/ERC165.sol:22",
+        "inherit": [
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165": {
+        "src": "@openzeppelin/contracts/utils/introspection/IERC165.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "contracts/SkiPass.sol:SkiPass": {
+        "src": "contracts/SkiPass.sol:7",
+        "version": {
+          "withMetadata": "760d8ccb6f1ecab8358bc963429307ed784c167801cfbff69d0c69b206c4bcd3",
+          "withoutMetadata": "760d8ccb6f1ecab8358bc963429307ed784c167801cfbff69d0c69b206c4bcd3",
+          "linkedWithoutMetadata": "760d8ccb6f1ecab8358bc963429307ed784c167801cfbff69d0c69b206c4bcd3"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/access/Ownable.sol:Ownable",
+          "@openzeppelin/contracts/token/ERC1155/ERC1155.sol:ERC1155",
+          "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol:IERC1155MetadataURI",
+          "@openzeppelin/contracts/token/ERC1155/IERC1155.sol:IERC1155",
+          "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "addResort(string,address payable)",
+          "createPass(uint256,uint8,uint256,uint256)",
+          "purchasePass(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "SkiPass",
+            "src": "contracts/SkiPass.sol:35"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "nextResortId",
+            "src": "contracts/SkiPass.sol:31"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "nextPassId",
+            "src": "contracts/SkiPass.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SkiPass",
+              "label": "resorts",
+              "type": "t_mapping(t_uint256,t_struct(Resort)1877_storage)",
+              "src": "contracts/SkiPass.sol:28"
+            },
+            {
+              "contract": "SkiPass",
+              "label": "passes",
+              "type": "t_mapping(t_uint256,t_struct(Pass)1889_storage)",
+              "src": "contracts/SkiPass.sol:29"
+            },
+            {
+              "contract": "SkiPass",
+              "label": "nextResortId",
+              "type": "t_uint256",
+              "src": "contracts/SkiPass.sol:31"
+            },
+            {
+              "contract": "SkiPass",
+              "label": "nextPassId",
+              "type": "t_uint256",
+              "src": "contracts/SkiPass.sol:32"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_struct(Resort)1877_storage)": {
+              "label": "mapping(uint256 => struct SkiPass.Resort)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(Resort)1877_storage": {
+              "label": "struct SkiPass.Resort",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "isActive",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "wallet",
+                  "type": "t_address_payable"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_mapping(t_uint256,t_struct(Pass)1889_storage)": {
+              "label": "mapping(uint256 => struct SkiPass.Pass)"
+            },
+            "t_struct(Pass)1889_storage": {
+              "label": "struct SkiPass.Pass",
+              "members": [
+                {
+                  "label": "passType",
+                  "type": "t_enum(PassType)1870"
+                },
+                {
+                  "label": "resortId",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "duration",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "active",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_enum(PassType)1870": {
+              "label": "enum SkiPass.PassType",
+              "members": [
+                "DAY",
+                "MULTIPLE_DAYS",
+                "SEASON"
+              ]
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      }
+    }
+  ]
+}
