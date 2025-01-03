@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient: linear-gradient(to top left, #00f5a0, #00c65e);
+    --background: 169 65% 3.84%;
+    --foreground: 169 10% 97.4%;
+    --muted: 169 50% 14.399999999999999%;
+    --muted-foreground: 169 10% 54.8%;
+    --popover: 169 45% 6.24%;
+    --popover-foreground: 169 10% 97.4%;
+    --card: 169 45% 6.24%;
+    --card-foreground: 169 10% 97.4%;
+    --border: 169 50% 14.399999999999999%;
+    --input: 169 50% 14.399999999999999%;
+    --primary: 169 100% 48%;
+    --primary-foreground: 169 10% 4.8%;
+    --secondary: 169 50% 14.399999999999999%;
+    --secondary-foreground: 169 10% 97.4%;
+    --accent: 169 50% 14.399999999999999%;
+    --accent-foreground: 169 10% 97.4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 169 10% 97.4%;
+    --ring: 169 100% 48%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: hsl(var(--background)) !important;
+  z-index: 0;
+}
+
+.leaflet-marker-icon {
+  border-radius: 50%;
+  border: none;
+}
+
+.partner-marker {
+  background-color: hsl(var(--primary));
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  border: none;
+}
+
+.allied-marker {
+  background-color: transparent;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  border: 2px solid hsl(var(--foreground));
+}
+
+.resort-popup {
+  min-width: 300px !important;
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: none;
+  border-radius: var(--radius);
+}
+
+.resort-popup .leaflet-popup-content-wrapper {
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  padding: 0 !important;
+}
+
+.resort-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.resort-popup .leaflet-popup-tip {
+  background: hsl(var(--card));
+}
